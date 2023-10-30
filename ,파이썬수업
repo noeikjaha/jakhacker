@@ -23,4 +23,89 @@ else:
   B= 20+(A-2)*4
 
 print("강아지이 나이를  사람 나이로 환산하면 ", b , "살입니다")
-            
+
+import random
+
+solution = random.randint(0,99)
+user=int(input("복권본호를 입력하시오 :"))
+
+s1 = solution // 10
+s2 = solution %10
+
+u1 = user // 10
+u2 = user %10
+print("당첨번호는 " , solution , "입니다")
+
+if (s1 == u1 and s2==u2):
+  print("상금은 100만원입니다")
+
+elif (s1==u1
+     or  s1==u2
+     or  s2==u1
+     or  s2==u2):
+  print("상금은 50만원입니다")
+
+else:
+  print("상금은 없습니다")
+
+
+import turtle
+t.shape("turtle")
+
+x1=int(input("큰원의  중좌표 x1: "))
+y1=int(input("큰원의  중좌표 y1: "))
+r1=int(input("큰원의  반지름  r1: "))
+x2=int(input("큰원의  중좌표 x2: "))
+y2=int(input("큰원의  중좌표 y2: "))
+r2=int(input("큰원의  반지름 ,r2: "))
+
+t.up()
+t.goto(x1,y1)
+t.down()
+t.circle(r2)
+
+dist = ((x1-x2)*(x1-x2)+ (y1-y2)*(y1-y2))** 0.5
+if dist <=r1-r2:
+        turtle.write("두뻔째 원이 첫번째의 내부 있음")
+elif dist <=r2-r1:
+        turtle.write("첫번째 원이 두뻔째 원의   내부 있음")
+
+h= float(input("키기를 입략하시여오"))
+w= float(input("무게를  입력하시오"))
+
+bmi= w / (h*h)
+
+print("당신의 BMI= " , bmi)
+if bmi <=18.4:
+  print("처체중입니다")
+elif 18.5<= bmi<= 24.9:
+  print("소체중입니다")
+else:
+  print("대체중입니다")
+
+A= input("출생연도를 입력하시오")
+B= int(A[-1])
+day =["월욜 ", "수욜","목욜","금욜"]
+v_day = day[B%5]
+print(v_day + "에 접종가능합니다")
+
+import random
+
+option =["바위 ","가위 ","가위" ]
+
+user = input("바위 ","가위 ","가위를 입력하시오")
+computer = random.choice(option)
+print("컴퓨터: computer.")
+
+if user == computer :
+  print("비겼습니다")
+elif user == "바위" and computer == "가위":
+  print("컴퓨터가 쳤다")
+
+elif user == "보" and  computer == "바위":
+  print("컴퓨터가 졌습니다")
+elif user == "가위" and  computer== "보":
+  print("컴퓨터가 졌습니다")
+
+else:
+  print("컴퓨터가 이겼습니다")
